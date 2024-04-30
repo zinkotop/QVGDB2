@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui veut gagner des Bitcoins - Le jeu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.12.1/underscore-min.js'defer></script>
+    <script src='quiz.js'defer></script>
+</head>
+<body> 
+    <div class="start-page" id='start-page'>
+        <div class='writeup'>
+            <div class="title">Bienvenue à Qui veut gagner des Bitcoins</div>  
+        </div>
+        <div class="page1">
+        <button class="play" id="play" >Jouer</button>
+        <button class="play" id="startPageHighscore" onclick="showHighscore()">Classement</button>
+        <button class="play" id="rules"><a href="index-manualeutente.html">Règles du jeu</a></button>
+    </div>
+    </div>
+    
+    <div class="play-game hide" id='play-game'>
+        <div class="game-section" id="game-section">
+            <div class="life-line" id="life-line">
+                <button class="fifty" id="fifty"></button>
+                <button class="audience" id="audience"></button>
+                <button class="phone" id="phone"></button>
+            </div>
+            <div class='alert' id='alert'></div>
+            
+            <div class='audience-vote' id='audience-vote'>
+                <div class="a" id="a">A</div>  
+                <div class="b" id="b">B</div>   
+                <div class="c" id="c">C</div>           
+                <div class="d" id="d">D</div>        
+            </div>
+            
+            <div class="question" id="question">Question</div>
+            <div class="answer" id="answer">
+                
+            </div>
+            <div class="controls">
+                <button class="next-btn btn hide" id="next-btn">Continuez</button>
+                <button class="next-btn btn hide" id="exit-btn">Quittez</button>
+            </div>
+        </div>
+         
+        <div class="winning-section" id="winning-section">
+            <div class="won" id='won'>10<div class='circle'></div><p>1023 btc</p></div>
+            <div class="won" id='won'>9<div class='circle'></div><p>511 btc</p></div>
+            <div class="won" id='won'>8<div class='circle'></div><p>255 btc</p></div>
+            <div class="won" id='won'>7<div class='circle'></div><p>127 btc</p></div>
+            <div class="won" id='won'>6<div class='circle'></div><p>63 btc</p></div>
+            <div class="won" id='won'>5<div class='circle'></div><p>31 btc</p></div>
+            <div class="won" id='won'>4<div class='circle'></div><p>15 btc</p></div>
+            <div class="won" id='won'>3<div class='circle'></div><p>7 btc</p></div>
+            <div class="won" id='won'>2<div class='circle'></div><p>3 btc</p></div>
+            <div class="won" id='won'>1<div class='circle'></div><p>1 btc</p></div>
+        </div>
+    </div>
+    <div class="game-end hide" id='game-end'>
+        <div id="finalScore"></div>
+            <input type="text" size = "50" placeholder="Écrivez votre nom d'utilisateur" name="intials" id="initials"/>
+            <button id="submitScore">Soumettre Score</button>
+            <div class='show-winnings' id='show-winnings'></div>
+            <button class="restart-btn btn" id="restart-btn">Rejouer</button>
+    </div>
+        <div class="highscoreContainer hide" id="highscoreContainer">
+        <h1>Classement</h1>
+        <div id="high-scorePage">
+            <div id="highscore-header">
+            <ul>Classement</ul>
+                <ul>Nom d'utilisateur</ul>
+                <ul>Meilleur score</ul>
+                <ul>Date</ul>
+               
+            </div>
+            <div id= "dati">
+            <div id = "highscore-initials"></div>
+            <div id = "highscore-score"></div>
+            <div id = "highscore-startTime"></div>
+            <div id = "highscore-elapsedTime"></div>
+            </div>
+            <button class="btn" id="clearHighscore" onclick="clearScore()">Effacer le classement</button>
+            <button class="btn" id="accueil" >Retour à l'accueil</button>
+            <script> document.getElementById("accueil").addEventListener("click",
+            function(){
+                window.location.href ="index.html";
+                    }); 
+            </script>
+            
+            <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+
+document.querySelector("#play").addEventListener("click",() =>{
+	for (let index = 0; index < (Math.floor(Math.random()*10)+8); index++){
+		confetti({
+				origin:{
+						x: Math.random(),
+						y:Math.random() -0.1
+				}
+		})
+	}
+})
+</script>
+	</div>
+	</div>
+</html>

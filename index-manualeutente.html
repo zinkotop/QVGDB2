@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Réglement du jeu</title>
+    <link href="style-manualeutente.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script-manualeutente.js"></script>
+  </body>
+</html>
+<button class="retour"><a href="index.html">Retour</a></button>
+<div class="container">
+<h1>Règles du jeu</h1>
+</div> 
+
+<div class="container0">
+<div class="tab">
+  <button class="tablinks" onmouseover="opengioco(event, 'INIZIO DEL GIOCO')"> Début du jeu</button>
+  <button class="tablinks" onmouseover="opengioco(event, 'DOMANDE')">Quiz</button>
+  <button class="tablinks" onmouseover="opengioco(event, 'AIUTI')">Aide</button>
+  <button class="tablinks" onmouseover="opengioco(event, 'USERNAME E CLASSIFICA')">Nom d'utilisateur et classement</button>
+   <button class="tablinks" onmouseover="opengioco(event, 'TERMINE DEL GIOCO')">Fin du jeu</button>
+</div>
+
+<div id="INIZIO DEL GIOCO" class="tabcontent">
+  <h3>DÉBUT DU JEU</h3>
+  <p>Cliquer sur le bouton "jouer" lance le jeu.</p>
+</div>
+
+<div id="DOMANDE" class="tabcontent">
+  <h3>Questions</h3>
+  <p>
+Il y a un quiz de culture générale comprenant 10 questions, classées par ordre de difficulté croissante. 
+Chaque question a 4 choix de réponses, dont une seule est correcte. 
+Si l'utilisateur répond correctement à une question, il gagnera un montant fixe de bitcoins, qui est différent pour chaque question. 
+Le montant total de bitcoins gagnés sera affiché sur le côté droit de l'écran.:<br>
+Question 1: 1 bitcoin <br>
+Question 2: 3 bitcoins<br>
+Question 3: 7 bitcoins<br>
+Question 4: 15 bitcoins<br>
+Question 5: 31 bitcoins<br>
+Question 6: 63 bitcoins<br>
+Question 7: 127 bitcoins<br>
+Question 8: 255 bitcoins <br>
+Question 9: 511 bitcoins<br>
+Question 10: 1023 bitcoins<br>
+
+  </p>
+</div>
+
+<div id="AIUTI" class="tabcontent">
+  <h3>AIDE</h3>
+<p>Au début du jeu, le joueur aura accès à trois boutons d'aide situés en haut de l'écran. 
+Pendant le jeu, il sera possible d'utiliser chacune de ces aides une seule fois. 
+<ul>
+La première aide consiste à éliminer deux réponses incorrectes, en appuyant sur le bouton "50/50". 
+</ul>
+<ul>
+La deuxième aide est appelée "appel à la maison", elle peut fournir une suggestion de réponse, mais elle peut également ne pas donner de réponse du tout. 
+</ul>
+<ul>
+Enfin, la troisième aide est le "vote du public", où les spectateurs peuvent voter pour leur choix parmi les options de réponse, créant ainsi un graphique - en particulier un histogramme - qui permettra de comprendre la réponse exacte, même si certaines données numériques ne sont pas fournies. 
+</ul></p>
+
+</div>
+<div id="USERNAME E CLASSIFICA" class="tabcontent">
+  <h3> NOM D'UTILISATEUR ET CLASSEMENT</h3>
+  <p>A la fin du jeu, vous devrez entrer votre nom d'utilisateur qui sera ensuite enregistré par le logiciel dans un classement dans lequel apparaîtront également le score obtenu, la date du match et le temps de jeu.
+  </p>
+</div>
+
+<div id="TERMINE DEL GIOCO" class="tabcontent">
+  <h3> FIN DU JEU </h3>
+  <p> Le jeu prendra fin dans les cas suivants :<br>
+  <ul>Si le joueur décide de quitter le jeu en appuyant sur le bouton "Quitter", il emportera avec lui le jackpot accumulé jusqu'à ce point.</ul>
+  <ul> Si le joueur répond incorrectement à une question, il perdra le jackpot accumulé jusqu'à ce point.</ul>
+  <ul> Si le joueur répond correctement à la dixième et dernière question, il remportera tous les Bitcoins en jeu.</ul>
+  </p>
+</div>
+
+  </p>
+</div>
