@@ -1546,4 +1546,22 @@ questions.forEach((question, index) => {
 
 });
 
+function generateLetters(numOptions) {
+    const letters = ['A', 'B', 'C', 'D'];
+    return letters.slice(0, numOptions);
+}
 
+function addLettersToAnswers(question) {
+    const numOptions = question.answers.length;
+    const letters = generateLetters(numOptions);
+    
+    for (let i = 0; i < numOptions; i++) {
+        question.answers[i].letter = letters[i];
+    }
+}
+
+// Appel de la fonction pour ajouter les lettres aux options de réponse
+addLettersToAnswers(questionExample);
+
+// Affichage de la question avec les lettres ajoutées
+console.log(questionExample);
